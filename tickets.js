@@ -7,7 +7,10 @@ function calculateTicketPrice(quantity, basePrice, isVip = false) {
   if (isVip) {
     total *= 1.5;
   }
-  return Math.floor(total);
+  if (quantity >= 5) {
+    total *= 0.9;
+  }
+  return Math.round(total);
 }
 
 module.exports = { isValidQuantity, calculateTicketPrice };
