@@ -10,6 +10,7 @@ function calculateTicketPrice(quantity, basePrice, isVip = false) {
   if (quantity >= 5) {
     total *= 0.9;
   }
+  total -= 10;
   return Math.round(total);
 }
 
